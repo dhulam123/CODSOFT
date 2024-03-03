@@ -1,0 +1,90 @@
+<div class="header">
+    <div class="top-info">
+        <div class="info">
+            <div class="left-info">
+                <div class="email-info">
+                    <i class="fa-regular fa-envelope"></i>
+                    <p>vaishnavidhulam357@gmail.com</p>
+                </div>
+                <div class="call-info">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <p>+91-8530401840</p>
+                </div>
+            </div>
+            <div class="right-info">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <img src="https://zcube.in/decare/img/logo/logo.png" alt="">
+        <div class="links">
+            <a href="index.html">Home <span> + </span></a>
+            <a href="aboutUs.html">About Us <span> + </span> </a>
+            <a href="services.html" class="service">Services <span> + </span> </a>
+                <div class="services-content">
+                    <a href="">Root Canal</a>
+                    <a href="">Alignment Teeth</a>
+                    <a href="">Cosmetic Teeth</a>
+                    <a href="">Oral Hygiene</a>
+                    <a href="">Live Advisory</a>
+                    <a href="">Cavity Inspection</a>
+                </div>
+            <a href="register.html" class="page">Pages <span> + </span></a>
+                <div class="pages-content">
+                    <a href="">Gallery </a>
+                    <a href="">Pricing</a>
+                    <a href="">FAQ</a>
+                    <a href="">Team</a>
+                    <a href="">Team Details</a>
+                    <a href="">Shop</a>
+                    <a href="">Shop Details</a>
+                </div>
+            <a href="login" class="blog">Blog <span> + </span> </a>
+                <div class="blogs-content">
+                    <a href="">Blog </a>
+                    <a href="">Blog Details</a>
+                </div>
+            <a href="register.html">Contact <span> + </span></a>
+            <a id="book" href="register.html">BOOK APPOINTMENT</a>    
+        </div>
+    </div>
+</div>
+<script>
+var reveals = document.querySelectorAll('.reveal')
+var review = document.querySelectorAll('.review-box')
+window.addEventListener('scroll',function(){
+    for(i=0;i<reveals.length;i++){
+        let windowHeight = this.window.innerHeight;
+        let topReveal = reveals[i].getBoundingClientRect().top;
+        let revealPoint = 200;
+        if(topReveal<windowHeight-revealPoint){
+            reveals[i].classList.remove('reveal');
+            reveals[i].classList.add('active');
+        }else{
+            reveals[i].classList.remove('active');
+            reveals[i].classList.add('reveal');
+        }
+    }
+
+    for(i=0;i<review.length;i++){
+        let windowHeight = this.window.innerHeight;
+        let topBox = review[i].getBoundingClientRect().top;
+        let boxPoint = 200;
+        if(topBox<windowHeight-boxPoint){
+            review[i].style.transform = 'translateX(0px)'
+        }
+        else{
+            if(i%2==0){
+                review[i].style.transform = 'translateX(-400%)'
+            }else{
+                review[i].style.transform = 'translateX(400%)'
+            }
+        }
+    }
+
+})
+</script>

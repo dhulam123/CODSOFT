@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+*{
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:linear-gradient(to right,rgb(221, 248, 248),white,rgb(221, 248, 248));
+}
+
+/* ---------------------------- header csss ------------------------------------*/
+.header{
+    display: flex;
+    flex-direction: column;
+}
+.header .top-info{
+    width: 100%;
+    height: 60px;
+    background-color: #0e264f;
+}
+.top-info .info{
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-info .info .left-info{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+    color: white;
+    width: 50%;
+    height: 100%;
+}
+.left-info .email-info,
+.left-info .call-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.top-info .info .right-info{
+    display: flex;
+    align-items: center;
+    justify-content:end;
+    gap: 30px;
+    color: white;
+    width: 50%;
+    height: 100%;
+    padding-right: 30px;
+}
+.top-info .info .right-info i{
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+.top-info .info .right-info i:hover{
+    transform: scale(1.5);
+    color: skyblue;
+}
+.nav{
+    width: 90%;
+    height:70px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    color: black;
+     /* background-color: red; */
+}
+.nav img{
+    height: 70%;
+    width: 17%;
+    margin-left: 30px;
+    /* background-color: red; */
+}
+.nav .links{
+    width: 80%;
+    height: 100%;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+.links a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+}
+.links a span{
+    color: blue;
+}
+#book{
+    background:linear-gradient(to right,#0d6efd,#6610f2);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+#book:hover{
+    background:linear-gradient(to right,#6610f2,#0d6efd);
+}
+.services-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    top: 60px;
+    left: 31%;
+    border-top: 5px solid blue;
+}
+.pages-content{
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 43%;
+    min-width:250px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-top: 5px solid blue;
+}
+.blogs-content{
+    display: none;
+    min-width: 150px;
+    position: absolute;
+    top: 60px;
+    left: 54%;  
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-top: 5px solid blue;
+}
+.service:hover + .services-content,
+.services-content:hover {
+    display: flex;
+    flex-direction: column;
+}
+.page:hover + .pages-content,
+.pages-content:hover {
+    display: flex;
+    flex-direction: column;
+}
+.blog:hover + .blogs-content,
+.blogs-content:hover {
+    display: flex;
+    flex-direction: column;
+}
+.services-content a,
+.pages-content a,
+.blogs-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid silver;
+}
+
+/* ---------------------------- main content csss ------------------------------------*/
+.active{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all ease-in 1s;
+}
+.creveal{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all ease-in 1s;
+}
+.main-content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 10px;
+}
+.main-content .left-div,
+.main-content .right-div{
+    width: 50%;
+}
+.main-content .right-div{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 20px;
+}
+.main-content .left-div{
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    gap: 35px;
+    /* text-align: left; */
+}
+.left-div .welcome-text{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.left-div .welcome-text p,
+.left-div .welcome-text h3,
+.left-div .welcome-text h1{
+    width: 95%;
+    text-align:left;
+    padding-left: 100px;
+    /* font-weight: bold; */
+}
+.left-div .welcome-text h3{
+    color: #6610f2;
+    font-size: 22px;
+}
+.left-div .welcome-text h1{
+    font-size: 60px;
+    font-style: normal;
+}
+.left-div .welcome-text p{
+    color: rgb(151, 150, 150);
+}
+.left-div .email-div{
+    width: 80%;
+    height: 90px;
+    margin-left: 100px;
+    background-color: white;
+    box-shadow: 5px 5px 12px skyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.email-div .email-input{
+    width: 95%;
+    height: 75%;
+    margin: 0 auto;
+    display: flex;
+    background-color: burlywood;
+}
+.email-div input{
+    width: 67%;
+    height: 100%;
+    background-color: whitesmoke;
+    border: none;
+    outline: none;
+}
+.email-div input::placeholder{
+    padding-left: 15px;
+}
+.email-div h3{
+    width: 35%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background:linear-gradient(to right,#0d6efd,#6610f2);
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    font-weight: 100;
+    font-size: 16px;
+    cursor: pointer;
+}
+.email-div h3:hover{
+    background:linear-gradient(to right,#6610f2,#0d6efd);
+}
+
+/* ---------------------------- service content csss ------------------------------------*/
+.service-content{
+    width: 100%;
+    height: auto;
+    margin-top: -80px;
+    position: absolute;
+    background-color: white;
+    padding-top: 30px;
+}
+.actives{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all ease-in 1s;
+}
+.sreveal{
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all ease-in 1s;
+}
+.service-content h2{
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+}
+.service-content h1{
+    text-align: center;
+    font-size: 60px;
+}
+.service-content .all-services{
+    width: 90%;
+    height: 550px;
+    margin: 0 auto;
+    display: flex;
+    gap: 5%;
+}
+.all-services .left-service,
+.all-services .middle-service,
+.all-services .right-service{
+    width: 35%;
+    height: 100%;
+}
+.all-services .left-service,
+.all-services .right-service{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0px;
+    gap:20px;
+}
+.all-services .left-service .services,
+.all-services .right-service .services{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    border: 1px solid grey;
+    padding: 0px 10px;
+}
+.left-service .services img,
+.right-service .services img{
+    width: 15%;
+    height: 30%;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+.left-service .services .desc,
+.right-service .services .desc{
+    width: 75%;
+    text-align: center;
+    font-size: 15px;
+    /* background-color: blue; */
+    padding-top: 30px;
+}
+.all-services .middle-service{
+    padding-top: 30px;
+    text-align: center;
+}
+
+/* ---------------------------- about content csss ------------------------------------*/
+.about-main-div{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin-top: 540px;
+}
+.activea{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all ease-in 1s;
+}
+.areveal{
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all ease-in 1s;
+}
+.about-main-div .left-div{
+    height: 80%;
+    width: 40%;
+    background: url(' https://zcube.in/decare/img/features/about_img.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+    margin-left: 80px;
+}
+.about-main-div .right-div{
+    height: 80%;
+    width: 50%;
+    /* background-color: blue; */
+}
+.right-div .about-text{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.right-div .about-text p,
+.right-div .about-text h3,
+.right-div .about-text h1{
+    width: 95%;
+    text-align:left;
+    padding-left: 80px;
+    /* font-weight: bold; */
+}
+.right-div .about-text h3{
+    color: #6610f2;
+    font-size: 22px;
+}
+.right-div .about-text h1{
+    font-size: 60px;
+    font-style: normal;
+}
+.right-div .about-text p{
+    font-size: 15px;
+    color: rgb(151, 150, 150);
+}
+.right-div .read-more{
+    width: 25%;
+    padding: 15px 0px;
+    border-radius: 10px;
+    background:linear-gradient(to right,#0d6efd,#6610f2);
+    color: white;
+    margin: 30px auto;
+    text-align: center;
+    background-color: blue;
+    cursor: pointer;
+}
+.right-div .read-more:hover{
+    background:linear-gradient(to right,#6610f2,#0d6efd);
+}
+.submit-now{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    padding-top: 32px;
+}
+.submit-now .form-div{
+    width: 85%;
+    height: 80%;
+    background:linear-gradient(to right,#0d6efd,#6610f2);   
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border-radius: 5px;
+}
+.submit-now .input-field{
+    width: 23%;
+    height: 60px;
+    display: flex;
+    position: relative;
+}
+.submit-now .input-field i{
+    position: absolute;
+    right: 5%;
+    top: 40%;
+}
+.submit-now .input-field input,select{
+    height: 100%;
+    width: 100%;
+    padding-left: 30px;
+    border-radius: 5px;
+    border: 0;
+}
+.submit-now .input-field input::placeholder{
+    color: black;
+}
+.submit-now .submit-button{
+    width: 17%;
+    height: 60px;
+    background-color: transparent;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    border: 2px solid white;
+    color: white;
+    box-shadow: 0px 0px 5px white;
+    cursor: pointer;
+}
+.submit-now .submit-button:hover{
+    background-color: whitesmoke;
+    color: blue;
+    border: 2px solid darkblue;
+}
+
+/* ---------------------------- testimonial content csss ------------------------------------*/
+.testimonial-content{
+    width: 100%;
+    height: 650px;
+    background:linear-gradient(to right,rgb(221, 248, 248),white,rgb(221, 248, 248));
+    padding-top: 30px;
+}
+.activet{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all ease-in 1s;
+}
+.treveal{
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all ease-in 1s;
+}
+.testimonial-content h2{
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+}
+.testimonial-content h1{
+    text-align: center;
+    font-size: 60px;
+}
+.testimonial-content .reviews-div{
+    width: 85%;
+    height: 350px;
+    margin: 0 auto;
+    margin-top: 60px;
+    display: flex;
+    gap: 40px;
+}
+.testimonial-content .reviews-div .review{
+    width: 46%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+    margin: 0 auto;
+}
+.review img{
+    width: 132px;
+    height: 132px;
+    position: absolute;
+    top: -12%;
+    left: 10%;
+    z-index: 1;
+}
+.review .quotes-and-stars{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    position: relative;
+}
+.quotes-and-stars #star{
+    height: auto;
+    position: absolute;
+    top: 65%;
+}
+.quotes-and-stars #quotes{
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    height: 60px;
+    width: 60px;
+}
+.review .desc{
+    width: 80%;
+    height: 150px;
+    margin: 0 auto;
+}
+.review .author{
+    width: 80%;
+    height: 50px;
+    margin: 10px auto;
+    display: flex;
+    gap: 30px;
+}
+.author p{
+    background: linear-gradient(to top,blue,skyblue,skyblue,blue);
+    color: black;
+    padding: 0px 20px;
+    display: grid;
+    font-weight: bold;
+    font-size: 20px;
+    place-items: center;
+    box-shadow: 0px 0px 10px black;
+}
+.author h1{
+    font-size: 28px;
+    text-align: left;
+    color: blue;
+    display: grid;
+    place-items: center;
+}
+#nextBtn,#prevBtn{
+    width: 4%;
+    font-size: 45px;
+    color: blue;
+    height: 20px;
+    text-align: center;
+    padding-top: 13%;
+    cursor: pointer;
+    transition: all ease-in 0.5s;
+}
+#nextBtn:hover,
+#prevBtn:hover{
+    color:midnightblue;
+}
+
+/* ---------------------------- footer content csss ------------------------------------*/
+.footer{
+    width: 100%;
+    height: 580px;
+}
+.activef{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all ease-in 1s;
+}
+.freveal{
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all ease-in 1s;
+}
+.footer .top-footer{
+    width: 100%;
+    height: 500px;
+    background-color: #0e264f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.top-footer .dcare-div{
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.top-footer .dcare-div img{
+    height: 12%;
+    width: 60%;
+}
+.top-footer .dcare-div p{
+    width: 100%;
+    color: white;
+    font-size: 15px;
+}
+.top-footer .dcare-div .open-close-time{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+.open-close-time .time-logo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: white;
+    background-image: -webkit-linear-gradient( 0deg, rgb(9,152,230) 0%, rgb(54,96,217) 100%);
+}
+.open-close-time .time-logo i{
+    font-size: 20px;
+}
+.open-close-time .timing{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.top-footer .otherLinks-div{
+    width: 17%;
+    height: 80%;
+    /* border: 1px solid white; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.top-footer .otherLinks-div h2{
+    text-align: left;
+    padding-left: 30px;
+}
+.top-footer .otherLinks-div ul{
+    text-align: left;
+    padding-left: 30px;
+    list-style: none;
+    line-height: 45px;
+}
+.otherLinks-div ul li span{
+    color: blue;
+}
+.top-footer .ourServices-div{
+    width: 17%;
+    height: 80%;
+    /* border: 1px solid white; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.top-footer .ourServices-div h2{
+    text-align: left;
+    padding-left: 30px;
+}
+.top-footer .ourServices-div ul{
+    text-align: left;
+    padding-left: 30px;
+    list-style: none;
+    line-height: 45px;
+}
+.ourServices-div ul li span{
+    color: blue;
+}
+
+
+
+.top-footer .contactUs-div{
+    width: 26%;
+    height: 80%;
+    /* border: 1px solid white; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.top-footer .contactUs-div .open-close-time{
+    height: 17%;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    padding-left: 5px;
+    /* background-color: skyblue; */
+}
+.open-close-time .time-logo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: white;
+    background-image: -webkit-linear-gradient( 0deg, rgb(9,152,230) 0%, rgb(54,96,217) 100%);
+}
+.open-close-time .time-logo i{
+    font-size: 20px;
+}
+.open-close-time .timing{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+}
+
+
+.footer .bottom-footer{
+    width: 100%;
+    height: 80px;
+    background-color: #08162f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bottom-footer p{
+    color: white;
+    margin-left: 100px;
+}
+.bottom-footer .follow-icons{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 80px;
+    /* background-color: red; */
+}
+.bottom-footer .follow-icons .logo{
+    height: 50px;
+    width: 50px;
+    color: white;
+    background-color: grey;
+    /* padding: 20px; */
+    border-radius: 51%;
+    display: grid;
+    place-items: center;
+}
+.follow-icons .logo i{
+    font-size: 20px;
+}

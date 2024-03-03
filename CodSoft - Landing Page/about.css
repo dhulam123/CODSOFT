@@ -1,0 +1,65 @@
+.head-container{
+    width: 100%;
+    height: 450px;
+    background: url('https://zcube.in/decare/img/bg/bdrc-bg.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 200px;
+    gap: 25px;
+}
+.head-container h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+}
+.head-container p{
+    color: white;
+}
+.about-main-div{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-main-div .left-div{
+    height: 80%;
+    width: 40%;
+    background: url(' https://zcube.in/decare/img/features/about_img.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+    margin-left: 80px;
+}
+.about-main-div .right-div{
+    height: 80%;
+    width: 50%;
+    /* background-color: blue; */
+}
+
+.right-div .about-text{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.right-div .about-text p,
+.right-div .about-text h3,
+.right-div .about-text h1{
+    width: 95%;
+    text-align:left;
+    padding-left: 80px;
+    /* font-weight: bold; */
+}
+.right-div .about-text h3{
+    color: #6610f2;
+    font-size: 22px;
+}
+.right-div .about-text h1{
+    font-size: 65px;
+    font-style: normal;
+}
+.right-div .about-text p{
+    font-size: 15px;
+    color: rgb(151, 150, 150);
+}
