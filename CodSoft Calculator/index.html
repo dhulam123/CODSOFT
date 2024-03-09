@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .standard{
+            display: flex;
+        }
+        .scientific{
+            display: none;
+        }
+        .convertor{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h3 class="fa-solid fa-calculator"></h3>
+        <h3 class="heading">CALCULATOR</h3>
+    </div>
+    <div class="type">
+        <button style="color: greenyellow;" class="typename" onclick="Standardshow()" id="standardHeading">Standard</button>
+        <button class="typename" onclick="Scientificshow()" id="scientificHeading">Scientific</button>
+    </div>
+    <div class="screen" id="screen">
+            <input type="text" class="input" id="display">
+    </div>
+    <div class="standard" id="btn">
+        <div class="leftdiv" id="ld">
+            <button style="color: red;">M</button>
+            <button onclick="complement()">	&plusmn;</button>
+            <button onclick="sqrt()">&radic;</button>
+            <button class="number" data = "%">%</button>
+            <button onclick="rec()">1/x</button>
+        </div>
+        <div class="rightdiv" id="rd">
+            <button onclick="clearData()">CE</button>
+            <button onclick="clearData()">C</button>
+            <button onclick="cutInput()"><i class="fa-solid fa-circle-xmark"></i></button>
+            <button class="number" data = "/">/</button>
+
+            <button class="number" data = "7">7</button>
+            <button class="number" data = "8">8</button>
+            <button class="number" data = "9">9</button>
+            <button class="number" data = "*">*</button>
+
+            <button class="number" data = "4">4</button>
+            <button class="number" data = "5">5</button>
+            <button class="number" data = "6">6</button>
+            <button class="number" data = "-">-</button>
+
+            <button class="number" data = "1">1</button>
+            <button class="number" data = "2">2</button>
+            <button class="number" data = "3">3</button>
+            <button class="number" data = "+">+</button>
+
+            <button class= "number" id="zero" data="0">0</button>
+            <button class="number" data=".">.</button>
+            <button class="equalsto" onclick="solve()">=</button>
+        </div>
+    </div>
+    <div class="scientific" id="scientific">
+        <div class="leftdiv">
+            <button>Grad</button>
+            <button class="number" data="(">(</button>
+            <button class="number"  data=")">)</button>
+            <button>F-E</button>
+            <button style="color: red;">M</button>
+
+            <button class="number" data = "3.14">&Pi;</button>
+            <button onclick="Sin()">Sin</button>
+            <button onclick="Cos()">Cos</button>
+            <button onclick="Tan()">Tan</button>
+            <button onclick="complement()">&plusmn;</button>
+
+            <button onclick="square()">x&#178;</button>
+            <button onclick="sinInverse()">sin<sup>-1</sup></button>
+            <button onclick="cosInverse()">cos<sup>-1</sup></button>
+            <button onclick="tanInverse()">tan<sup>-1</sup></button>
+            <button onclick="sqrt()">&radic;</button>
+
+            <button>x<sup>y</sup></button>
+            <button onclick="power10()">10<sup>x</sup></button>
+            <button onclick="exponential()">e<sup>x</sup></button>
+            <button class="number" data = "%">Mod</button>
+            <button class="number" data = "%">%</button>
+
+            <button><sup>y</sup>&#8730;x</button>
+            <button onclick="log()">log</button>
+            <button>In</button>
+            <button onclick="factorial()">n!</button>
+            <button onclick="rec()">1/x</button>
+        </div>
+        
+        <div class="rightdiv">
+            <button onclick="clearData()">CE</button>
+            <button onclick="clearData()">C</button>
+            <button onclick="cutInput()"><i class="fa-solid fa-circle-xmark"></i></button>
+            <button class="number" data = "/">/</button>
+
+            <button class="number" data = "7">7</button>
+            <button class="number" data = "8">8</button>
+            <button class="number" data = "9">9</button>
+            <button class="number" data = "*">*</button>
+
+            <button class="number" data = "4">4</button>
+            <button class="number" data = "5">5</button>
+            <button class="number" data = "6">6</button>
+            <button class="number" data = "-">-</button>
+
+            <button class="number" data = "1">1</button>
+            <button class="number" data = "2">2</button>
+            <button class="number" data = "3">3</button>
+            <button class="number" data = "+">+</button>
+
+            <button class= "number" id="zero" data="0">0</button>
+            <button class="number" data=".">.</button>
+            <button class="equalsto" onclick="solve()">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

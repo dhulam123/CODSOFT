@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+body{
+    background-color: rgba(0,0,0,0.90);
+}
+button:hover{
+    cursor: pointer;
+}
+.header{
+    width: 99%;
+    padding: 0.5%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 5px;
+}
+.header .fa-solid {
+    margin-left: 20px;
+    color: greenyellow;
+}
+.header .heading{
+    margin-right: 550px;
+    color: white;
+}
+.type{
+    width: 60%;
+    height: 50px;
+    margin: 20px auto;
+    display: flex;
+    gap: 30px;
+}
+.typename{
+    width: 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: xx-large;
+    background-color: transparent;
+}
+.screen{
+    width: 60%;
+    height: 100px;
+    border-top: 2px solid greenyellow;
+    background-color: rgba(255,255,255,0.1);
+    margin: 20px auto;
+    display: flex;
+    gap: 10px;
+}
+.screen input{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: 0;
+    outline: 0;
+    text-align: right;
+    font-size: 45px;
+    padding-right: 20px;
+}
+.standard{
+    width: 60%;
+    height: 380px;
+    margin: 20px auto;
+    background-color: rgba(255,255,255,0.001);
+    display: flex;
+    gap: 5%;
+}
+.standard .leftdiv{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+.standard .leftdiv button{
+    height: 15.6%;
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    border: none;
+    font-size: 30px;
+}
+.standard .rightdiv{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+.standard .rightdiv button{
+    height: 16%;
+    width: 23.5%;
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    border: none;
+    font-size: 30px;
+}
+.standard .rightdiv #zero{
+    width:49% ;
+}
+.standard .rightdiv .equalsto{
+    background-color: green;
+}
+.scientific{
+    width: 60%;
+    height: 380px;
+    margin: 20px auto;
+    background-color: rgba(255,255,255,0.001);
+    display: flex;
+    gap: 2%;
+}
+.scientific .leftdiv{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+.scientific .leftdiv button{
+    height: 16%;
+    width: 18%;
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    border: none;
+    font-size: 22px;
+}
+.scientific .rightdiv{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+.scientific .rightdiv button{
+    height: 16%;
+    width: 23.5%;
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    border: none;
+    font-size: 26px;
+}
+.scientific .rightdiv #zero{
+    width:49% ;
+}
+.scientific .rightdiv .equalsto{
+    background-color: rgb(25, 116, 151);
+}
+.convertor{
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* background-color: red; */
+}
+.convertor .convertor-type{
+    width: 40%;
+    margin-left: 160px;
+    font-size: 35px;
+    background-color: rgba(255,255,255,0.001);
+    color: white;
+    border: 0; 
+    outline: 0;
+}
+.convertor-type option{
+    background-color: black;
+    font-size: 25px;
+}
+.bottomscreen{
+    width: 80%;
+    height:450px;
+    margin: 0 auto;
+    display: flex;
+}
+.bottomscreen .bottomleftdiv{
+    width: 65%;
+    height: 100%;
+}
+.bottomscreen .bottomrightdiv{
+    width: 35%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+.bottomrightdiv button{
+    height: 16%;
+    width: 18%;
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    border: none;
+    font-size: 22px;
+}
+.bottomrightdiv #ce{
+    width: 80px;
+}
+.bottomrightdiv .cut{
+    width: 170px;
+}
+.bottomrightdiv #dot{
+    width: 80px;
+}
+.bottomrightdiv #zero{
+    width: 170px;
+}
+.bottomrightdiv .number{
+    width: 80px;
+}
+.fromscreen, .toscreen{
+    width: 80%;
+    height: 130px;
+    margin-left: 9%;
+    margin-top: 2%;
+}
+.fromscreen input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-top: 2px solid darkorange;
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 40px;
+    padding-left: 30px;
+}
+.toscreen input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    /* border-top: 2px solid darkorange; */
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 40px;
+    padding-left: 30px;
+}
+.bottomleftdiv .convertor-from-unit{
+    width: 40%;
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: 25px;
+    background-color: rgba(255,255,255,0.001);
+    color: white;
+    border: 0; 
+    outline: 0;
+} 
+.convertor-from-unit option{
+    background-color: black;
+    font-size: 20px;
+}
+.bottomleftdiv .convertor-to-unit{
+    width: 40%;
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: 25px;
+    background-color: rgba(255,255,255,0.001);
+    color: white;
+    border: 0; 
+    outline: 0;
+} 
+.convertor-to-unit option{
+    background-color: black;
+    font-size: 20px;
+}
+.convertor-type .selected{
+    text-decoration: none;
+    background-color: orange;
+}
